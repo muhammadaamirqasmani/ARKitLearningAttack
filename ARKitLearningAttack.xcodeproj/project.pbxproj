@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		845CFF151FA364E300866D77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFF141FA364E300866D77 /* AppDelegate.swift */; };
-		845CFF171FA364E300866D77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFF161FA364E300866D77 /* ViewController.swift */; };
+		845CFF171FA364E300866D77 /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFF161FA364E300866D77 /* ARVC.swift */; };
 		845CFF1A1FA364E300866D77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845CFF181FA364E300866D77 /* Main.storyboard */; };
 		845CFF1C1FA364E300866D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845CFF1B1FA364E300866D77 /* Assets.xcassets */; };
 		845CFF1F1FA364E300866D77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845CFF1D1FA364E300866D77 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		845CFF111FA364E300866D77 /* ARKitLearningAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitLearningAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845CFF141FA364E300866D77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		845CFF161FA364E300866D77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		845CFF161FA364E300866D77 /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
 		845CFF191FA364E300866D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845CFF1B1FA364E300866D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845CFF1E1FA364E300866D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,38 @@
 		845CFF131FA364E300866D77 /* ARKitLearningAttack */ = {
 			isa = PBXGroup;
 			children = (
+				845CFF281FA3650A00866D77 /* ViewController */,
+				845CFF271FA3650300866D77 /* View */,
+				845CFF261FA364F900866D77 /* Model */,
 				845CFF141FA364E300866D77 /* AppDelegate.swift */,
-				845CFF161FA364E300866D77 /* ViewController.swift */,
-				845CFF181FA364E300866D77 /* Main.storyboard */,
 				845CFF1B1FA364E300866D77 /* Assets.xcassets */,
 				845CFF1D1FA364E300866D77 /* LaunchScreen.storyboard */,
 				845CFF201FA364E300866D77 /* Info.plist */,
 			);
 			path = ARKitLearningAttack;
+			sourceTree = "<group>";
+		};
+		845CFF261FA364F900866D77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		845CFF271FA3650300866D77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845CFF181FA364E300866D77 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		845CFF281FA3650A00866D77 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				845CFF161FA364E300866D77 /* ARVC.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845CFF171FA364E300866D77 /* ViewController.swift in Sources */,
+				845CFF171FA364E300866D77 /* ARVC.swift in Sources */,
 				845CFF151FA364E300866D77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
