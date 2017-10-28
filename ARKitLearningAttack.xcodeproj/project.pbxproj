@@ -22,6 +22,8 @@
 		845CFF1B1FA364E300866D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845CFF1E1FA364E300866D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		845CFF201FA364E300866D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F423A51FA4D88D00C72C6B /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
+		84F423A61FA4D88D00C72C6B /* Idle.dae */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; path = Idle.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +56,14 @@
 		845CFF131FA364E300866D77 /* ARKitLearningAttack */ = {
 			isa = PBXGroup;
 			children = (
+				845CFF161FA364E300866D77 /* ARVC.swift */,
 				845CFF281FA3650A00866D77 /* ViewController */,
 				845CFF271FA3650300866D77 /* View */,
 				845CFF261FA364F900866D77 /* Model */,
 				845CFF141FA364E300866D77 /* AppDelegate.swift */,
 				845CFF1B1FA364E300866D77 /* Assets.xcassets */,
+				84F423A61FA4D88D00C72C6B /* Idle.dae */,
+				84F423A51FA4D88D00C72C6B /* textures */,
 				845CFF1D1FA364E300866D77 /* LaunchScreen.storyboard */,
 				845CFF201FA364E300866D77 /* Info.plist */,
 			);
@@ -83,7 +88,6 @@
 		845CFF281FA3650A00866D77 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				845CFF161FA364E300866D77 /* ARVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
