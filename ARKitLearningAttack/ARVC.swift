@@ -25,10 +25,16 @@ class ARVC: UIViewController, ARSCNViewDelegate {
         
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         self.sceneView.showsStatistics = true
-        
-        //        Placing Object when view loaded
-        placeObject(x: 0.05, y: 0.05, z: 0.05, r: 0.0, a: -0.03)
-//        placeModel()
+        }
+    
+    
+    func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        print("rendered")
+        guard let pointOfView = sceneView.pointOfView else {return}
+        let transform = pointOfView.transform
+        let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
+        let location = SCNVector3(transform.m41, transform.m42, transform.m43)
+        let currentPositionOfCamera = orientation + location
     }
     
     
@@ -44,17 +50,10 @@ class ARVC: UIViewController, ARSCNViewDelegate {
         node.addChildNode(node)
         print("Object Place")
     }
-//    func placeModel()
-//    {
-//        let zombie = SCNScene(named: "idle.dae")
-//        let node = zombie?.rootNode.childNode(withName: "idle", recursively: true)
-//        node?.position = SCNVector3(0, 0, -0.2)
-//        node?.scale = SCNVector3(0.02, 0.02, 0.02)
-//        self.sceneView.scene.rootNode.addChildNode(node!)
-//        node?.addChildNode(node!)
-//        print("Object Place")
-//    }
+}
+
+func + (lhs: SCNVector3 , rhs: SCNVector3)-> SCNVector3{
     
-    
+    return SCNVector3Make(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z)
 }
 
