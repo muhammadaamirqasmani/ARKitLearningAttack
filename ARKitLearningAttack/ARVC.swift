@@ -12,15 +12,17 @@ import ARKit
 class ARVC: UIViewController, ARSCNViewDelegate {
     
     // Variables and Constants
-    var sceneView: ARSCNView!
+   // var sceneView: ARSCNView!
     let configration = ARWorldTrackingConfiguration()
     
+    @IBOutlet weak var draw: UIButton!
+    @IBOutlet weak var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sceneView = ARSCNView(frame: self.view.frame)
+        //self.sceneView = ARSCNView(frame: self.view.frame)
         sceneView.delegate = self
-        view.addSubview(self.sceneView)
+ //       view.addSubview(self.sceneView)
         self.sceneView.session.run(configration)
         
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
@@ -29,12 +31,33 @@ class ARVC: UIViewController, ARSCNViewDelegate {
     
     
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
-        print("rendered")
         guard let pointOfView = sceneView.pointOfView else {return}
         let transform = pointOfView.transform
         let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentPositionOfCamera = orientation + location
+        DispatchQueue.main.async {
+            if self.draw.isHighlighted {
+                let sphereNode = SCNNode(geometry: SCNSphere(radius: 0.02))
+                sphereNode.position = currentPositionOfCamera
+                self.sceneView.scene.rootNode.addChildNode(sphereNode)
+                sphereNode.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+                print("button Pressed")
+            }else{
+                let pointer = SCNNode(geometry: SCNSphere(radius: 0.01))
+                pointer.name = "pointer"
+                pointer.position = currentPositionOfCamera
+                self.sceneView.scene.rootNode.enumerateChildNodes({ (node, _) in
+                    if node.name == "pointer"{
+                        node.removeFromParentNode()
+                    }
+                })
+                self.sceneView.scene.rootNode.addChildNode(pointer)
+                pointer.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+                
+        }
+        }
+        
     }
     
     
