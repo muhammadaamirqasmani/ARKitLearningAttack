@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8401BCF61FBADCC000FC12CA /* PortalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401BCF51FBADCC000FC12CA /* PortalVC.swift */; };
+		8401BCF81FBAE91000FC12CA /* Portal.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8401BCF71FBAE91000FC12CA /* Portal.scn */; };
+		8401BCFA1FBAF59600FC12CA /* Portal.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8401BCF91FBAF59600FC12CA /* Portal.scnassets */; };
 		845CFF151FA364E300866D77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFF141FA364E300866D77 /* AppDelegate.swift */; };
 		845CFF171FA364E300866D77 /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFF161FA364E300866D77 /* ARVC.swift */; };
 		845CFF1A1FA364E300866D77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845CFF181FA364E300866D77 /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8401BCF51FBADCC000FC12CA /* PortalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalVC.swift; sourceTree = "<group>"; };
+		8401BCF71FBAE91000FC12CA /* Portal.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Portal.scn; path = Portal.scnassets/Portal.scn; sourceTree = "<group>"; };
+		8401BCF91FBAF59600FC12CA /* Portal.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Portal.scnassets; sourceTree = "<group>"; };
+		8401BD0C1FBB1EDE00FC12CA /* Idle.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Idle.scn; path = Portal.scnassets/Idle.scn; sourceTree = "<group>"; };
 		845CFF111FA364E300866D77 /* ARKitLearningAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitLearningAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845CFF141FA364E300866D77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845CFF161FA364E300866D77 /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
@@ -23,7 +30,6 @@
 		845CFF1E1FA364E300866D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		845CFF201FA364E300866D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F423A51FA4D88D00C72C6B /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
-		84F423A61FA4D88D00C72C6B /* Idle.dae */ = {isa = PBXFileReference; lastKnownFileType = text.xml.dae; path = Idle.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,16 +62,20 @@
 		845CFF131FA364E300866D77 /* ARKitLearningAttack */ = {
 			isa = PBXGroup;
 			children = (
-				845CFF161FA364E300866D77 /* ARVC.swift */,
 				845CFF281FA3650A00866D77 /* ViewController */,
 				845CFF271FA3650300866D77 /* View */,
 				845CFF261FA364F900866D77 /* Model */,
 				845CFF141FA364E300866D77 /* AppDelegate.swift */,
+				845CFF161FA364E300866D77 /* ARVC.swift */,
+				8401BCF51FBADCC000FC12CA /* PortalVC.swift */,
+				845CFF181FA364E300866D77 /* Main.storyboard */,
 				845CFF1B1FA364E300866D77 /* Assets.xcassets */,
-				84F423A61FA4D88D00C72C6B /* Idle.dae */,
+				8401BD0C1FBB1EDE00FC12CA /* Idle.scn */,
 				84F423A51FA4D88D00C72C6B /* textures */,
 				845CFF1D1FA364E300866D77 /* LaunchScreen.storyboard */,
 				845CFF201FA364E300866D77 /* Info.plist */,
+				8401BCF91FBAF59600FC12CA /* Portal.scnassets */,
+				8401BCF71FBAE91000FC12CA /* Portal.scn */,
 			);
 			path = ARKitLearningAttack;
 			sourceTree = "<group>";
@@ -80,7 +90,6 @@
 		845CFF271FA3650300866D77 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				845CFF181FA364E300866D77 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,8 +160,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8401BCFA1FBAF59600FC12CA /* Portal.scnassets in Resources */,
 				845CFF1F1FA364E300866D77 /* LaunchScreen.storyboard in Resources */,
 				845CFF1C1FA364E300866D77 /* Assets.xcassets in Resources */,
+				8401BCF81FBAE91000FC12CA /* Portal.scn in Resources */,
 				845CFF1A1FA364E300866D77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +177,7 @@
 			files = (
 				845CFF171FA364E300866D77 /* ARVC.swift in Sources */,
 				845CFF151FA364E300866D77 /* AppDelegate.swift in Sources */,
+				8401BCF61FBADCC000FC12CA /* PortalVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
